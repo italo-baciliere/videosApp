@@ -1,7 +1,8 @@
 {
   "name": "tabsApp",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

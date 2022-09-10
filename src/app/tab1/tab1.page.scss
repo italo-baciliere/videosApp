@@ -1,0 +1,44 @@
+.btn{
+  width: 113.39px;
+  height: 18.9px;
+  border: 1px solid #5065A8;
+  border-radius: 20px;
+  background: #FFFFFF; // background-color: #4CAF50;
+}
+
+.txt-roxo{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--ion-color-tertiary);
+}
+
+ion-item{
+
+  --padding-start: 10px;
+  --inner-padding-end: 10px;
+
+  ion-thumbnail{
+    height: 100%;
+    --size: 140px;
+    --border-radius: 100px;
+    margin-inline-end: 10px;
+  }
+  h1{
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+  p{
+    font-size: 0.6rem;
+  }
+  p+p{
+    color: rgb(138, 138, 138);
+  }
+  ion-chip {
+    --background: #00213f;
+    --color: #adefd1;
+    padding-inline: 5px;
+  }
+}
