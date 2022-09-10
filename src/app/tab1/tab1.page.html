@@ -8,53 +8,43 @@
 
 <ion-content [fullscreen]="true"> <!--conteudo da página-->
 
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-searchbar placeholder="Buscar"></ion-searchbar>
-  </ion-toolbar>
+  </ion-toolbar> -->
 
-  <div>
-    <a href="https://storyset.com/online">
-      <!--
-        https://storyset.com/illustration/online-wishes/rafiki
-        https://storyset.com/illustration/in-no-time/amico
-      -->
-      <img src="https://storyset.com/illustration/in-no-time/amico">
-    </a>
+  <!-- <div>
     <button class="btn txt-roxo">Buscar</button>
     <ion-button class="btn txt-roxo">Buscar</ion-button>
-  </div>
+  </div> -->
 
     <!-- List of Text Items -->
-  <ion-list lines="full">
+  <ion-list lines="full" *ngFor="let p of personas">
 
-    <ion-item>
-      <ion-thumbnail>
-        <img alt="Silhouette of mountains" src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e5355ed4600809f5a8dad51_peep-37.svg" />
-      </ion-thumbnail>
-      <ion-label class="ion-text-nowrap">
-        <div>
-          <h1>Karen Lana</h1>
-          <p>Centro de Contagem</p> <p>2 vagas</p>
-        </div>
-      </ion-label>
-      <ion-chip color="success" outline>
-        5.0
-      </ion-chip>
-    </ion-item>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-thumbnail>
+          <img alt="" [src]="p.url" />
+        </ion-thumbnail>
+        <!-- <ion-avatar>
+          <img alt="Silhouette of a person's head" [src]="p.url"/>
+        </ion-avatar> -->
+        <ion-label class="ion-text-nowrap">
+          <div>
+            <h1>{{p.nome}}</h1>
+            <p>{{p.municipio}}</p> <p>{{p.quantidadeVagas}} vagas</p>
+          </div>
+        </ion-label>
+        <ion-chip color="success" outline>
+          {{p.score}}
+        </ion-chip>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option>
+          <ion-icon name="trash" slot="end"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
 
-    <ion-item>
-      <ion-thumbnail>
-        <img alt="Silhouette of mountains" src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e535da59588e079598123fc_peep-103.svg" />
-      </ion-thumbnail>
-      <ion-label>Rodolfo Sales</ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-thumbnail>
-        <img alt="Silhouette of mountains" src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e532c33f3aa4b390f1bd62f_peep-3.svg" />
-      </ion-thumbnail>
-      <ion-label>Super Mario World</ion-label>
-    </ion-item>
   </ion-list>
 
 
