@@ -15,7 +15,8 @@ export class Tab1Page{
       url: 'https://www.lance.com.br/files/article_main/uploads/2022/09/07/63189a0c08120.jpeg',
       municipio: 'Centro de Contagem',
       quantidadeVagas: 0,
-      score: '3.7'
+      score: '3.7',
+      pagina: '/card'
     },
     {
       nome: 'Karen Lana',

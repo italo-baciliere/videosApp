@@ -21,7 +21,7 @@
   <ion-list lines="full" *ngFor="let p of personas">
 
     <ion-item-sliding>
-      <ion-item>
+      <ion-item [routerLink]="p.pagina">
         <ion-thumbnail>
           <img alt="" [src]="p.url" />
         </ion-thumbnail>
